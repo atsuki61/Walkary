@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
-"""2024/11/25 金定歩夢 django移行"""
+"""2024/11/25  django移行"""
 
 from pathlib import Path
 

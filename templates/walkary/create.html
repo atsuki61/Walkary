@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'walkary/css/create.css' %}">
+  </head>
+  <body>
+    <form class="profile-form" method="POST" action="{% url 'walkary:create_account' %}">
+      {% csrf_token %}
+
+      <!-- Existing User Fields -->
+      <div class="form-section">
+        <h3 class="section-title">基本情報</h3>
+        <div class="form-group">
+          <label class="form-label">ユーザーID</label>
+          {{ user_form.username }}
+          {{ user_form.username.errors }}
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">パスワード</label>
+          {{ user_form.password1 }}
+          {{ user_form.password1.errors }}
+          <div class="password-rules">
+            ※8文字以上、英数字を含めてください
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">パスワード(確認)</label>
+          {{ user_form.password2 }}
+          {{ user_form.password2.errors }}
+        </div>
+      </div>
+
+      <!-- New Profile Fields -->
+      <div class="form-section">
+        <h3 class="section-title">プロファイル情報</h3>
+        <div class="form-group">
+          <label class="form-label">名前</label>
+          {{ profile_form.name }}
+          {{ profile_form.name.errors }}
+        </div>
+        <button class="submit-btn" type="submit">登録</button>
+      </div>
+
+      <div class="form-switch">
+        すでにアカウントをお持ちの方は<a href="{% url 'walkary:login' %}">ログイン</a>
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,4 +1,4 @@
-"""2024/11/25 金定歩夢 django移行"""
+"""2024/11/25  django移行"""
 from django.db import models
 from django.contrib.auth.models import User
 

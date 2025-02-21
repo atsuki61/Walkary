@@ -1,4 +1,4 @@
-"""2024/11/25 金定歩夢 django移行"""
+"""2024/11/25  django移行"""
 # walkary/forms.py
 from django import forms
 from django.contrib.auth.models import User

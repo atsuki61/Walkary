@@ -1,4 +1,3 @@
-2025/2/10 西田圭佑
 python 3.11.2
 
 python manage.py runserver

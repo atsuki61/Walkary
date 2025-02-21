@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""2024/11/25 金定歩夢 django移行"""
+"""2024/11/25  django移行"""
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
